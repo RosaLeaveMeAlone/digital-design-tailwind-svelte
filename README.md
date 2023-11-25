@@ -1,3 +1,8 @@
+# Description
+
+This is a project made with Svelte and following the tailwind course by Brad Traversy [`Tailwind CSS From Scratch | Learn By Building Projects`](https://www.udemy.com/course/tailwind-from-scratch/)
+
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
