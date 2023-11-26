@@ -1,3 +1,16 @@
+<script>
+
+    let menuBtn;
+
+    let menu;
+
+    let navToggle = () => {
+        menuBtn.classList.toggle('open');
+        // menu.classList.toggle('flex');
+        menu.classList.toggle('hidden');
+    };
+</script>
+
 <!-- Hero Section -->
 <section id="hero">
     <!-- Hero Container -->
@@ -29,9 +42,23 @@
                     <div class="mx-2 group-hover:border-b group-hover:border-blue50"></div>
                 </div>
             </div>
-            <!-- Todo: Hamburger button -->
+            <!-- Hamburger button -->
+            <div class="md:hidden">
+                <button bind:this={menuBtn} on:click={navToggle} id="menu-btn" type="button" class="z-40 block hamburger md:hidden focus:outline-none">
+                    <span class="hamburger-top"></span>
+                    <span class="hamburger-middle"></span>
+                    <span class="hamburger-bottom"></span>
+                </button>
+            </div>
         </nav>
         <!-- Todo: Mobile Menu goes -->
+        <div bind:this={menu} id="menu" class="absolute hidden top-0 bottom-0 left-0 flex flex-col self-end  w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercase bg-black md:hidden">
+            <a href="#" class="hover:text-white-pink-500">About</a>
+            <a href="#" class="hover:text-white-pink-500">Careers</a>
+            <a href="#" class="hover:text-white-pink-500">Events</a>
+            <a href="#" class="hover:text-white-pink-500">Products</a>
+            <a href="#" class="hover:text-white-pink-500">Support</a>
+        </div>
         <div class="max-w-lg mt-32 mb-32 p-4 font-sans text-4xl text-white uppercase border-2 md:p-10 md:m-32 mx-0 md:text-6xl">
             Impresive Experiences That Deliver
         </div>
